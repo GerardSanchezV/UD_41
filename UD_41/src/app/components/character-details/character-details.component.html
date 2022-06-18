@@ -1,0 +1,23 @@
+<div class="container" *ngIf="personajes!=null;">
+  <div class="row">
+    <div class="col-2 m-5">
+      <div class="card d-flex flex-row" style="width: 18rem;">
+        <div>
+          <img src="{{personajes.image}}" class="card-img-top">
+          <div class="card-body ">
+            <h3 class="card-title">{{personajes.name}}</h3>
+            <h5 class="card-text">{{personajes.status}}</h5>
+            <h5 class="card-text">{{personajes.species}}</h5>
+            <h5 class="card-text">{{personajes.gender}}</h5>
+            <h5 class="card-text">{{personajes.origin.name}}</h5>
+            <h5 class="card-text">{{personajes.location.name}}</h5>
+
+            <a [routerLink]="['/characters']"class="btn btn-primary">Atrás</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

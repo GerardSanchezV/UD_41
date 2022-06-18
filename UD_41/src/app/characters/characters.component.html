@@ -1,0 +1,19 @@
+<div class="container" *ngIf="personajes!=null;else espera">
+  <div class="row">
+    <div class="col-2 m-5" *ngFor="let per of personajes">
+      <div class="card d-flex flex-row" style="width: 18rem;">
+        <div>
+          <img src="{{per.image}}" class="card-img-top">
+          <div class="card-body ">
+            <h5 class="card-title">{{per.name}}</h5>
+            <a [routerLink]="['/characters', per.id]"class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<ng-template #espera>Obteniendo datos...</ng-template>
